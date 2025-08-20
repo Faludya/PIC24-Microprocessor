@@ -1,0 +1,61 @@
+V3 49
+FL //vboxsvr/proiect_shared/PIC24/ALU.vhd 2022/01/12.13:06:40 J.40
+FL //vboxsvr/proiect_shared/PIC24/ctrl.vhd 2022/01/13.16:36:30 J.40
+FL //vboxsvr/proiect_shared/PIC24/DataMem.vhd 2022/01/12.11:40:09 J.40
+FL //vboxsvr/proiect_shared/PIC24/File_Regs.vhd 2022/01/12.11:40:58 J.40
+FL //vboxsvr/proiect_shared/PIC24/MUX2V16.vhd 2022/01/13.16:36:01 J.40
+FL //vboxsvr/proiect_shared/PIC24/MUX2V4.vhd 2022/01/12.11:51:51 J.40
+FL //vboxsvr/proiect_shared/PIC24/PC_Update.vhd 2022/01/12.11:41:31 J.40
+FL //vboxsvr/proiect_shared/PIC24/ProgCnt.vhd 2022/01/12.11:41:22 J.40
+FL //vboxsvr/proiect_shared/PIC24/ROM32x24.vhd 2022/01/13.16:23:59 J.40
+FL Z:/PIC24/ALU.vhd 2022/01/12.13:06:40 J.40
+EN work/ALU 1641985618 FL Z:/PIC24/ALU.vhd PB ieee/std_logic_1164 1192821031 \
+      PB ieee/std_logic_arith 1192821032 PB ieee/STD_LOGIC_UNSIGNED 1192821033
+AR work/ALU/Behavioral 1641985619 \
+      FL Z:/PIC24/ALU.vhd EN work/ALU 1641985618
+FL Z:/PIC24/ctrl.vhd 2022/01/13.16:36:30 J.40
+EN work/ctrl 1642084625 FL Z:/PIC24/ctrl.vhd PB ieee/std_logic_1164 1192821031 \
+      PB ieee/std_logic_arith 1192821032 PB ieee/STD_LOGIC_UNSIGNED 1192821033
+AR work/ctrl/Behavioral 1642084626 \
+      FL Z:/PIC24/ctrl.vhd EN work/ctrl 1642084625
+FL Z:/PIC24/DataMem.vhd 2022/01/12.11:40:09 J.40
+EN work/DataMem 1641981359 FL Z:/PIC24/DataMem.vhd PB ieee/std_logic_1164 1192821031 \
+      PB ieee/std_logic_arith 1192821032 PB ieee/STD_LOGIC_UNSIGNED 1192821033
+AR work/DataMem/Behavioral 1641981360 \
+      FL Z:/PIC24/DataMem.vhd EN work/DataMem 1641981359
+FL Z:/PIC24/File_Regs.vhd 2022/01/12.11:40:58 J.40
+EN work/File_Regs 1641981298 FL Z:/PIC24/File_Regs.vhd PB ieee/std_logic_1164 1192821031 \
+      PB ieee/std_logic_arith 1192821032 PB ieee/STD_LOGIC_UNSIGNED 1192821033
+AR work/File_Regs/Behavioral 1641981299 \
+      FL Z:/PIC24/File_Regs.vhd EN work/File_Regs 1641981298
+FL Z:/PIC24/MUX2V16.vhd 2022/01/13.16:36:01 J.40
+EN work/MUX2V16 1642084647 FL Z:/PIC24/MUX2V16.vhd PB ieee/std_logic_1164 1192821031 \
+      PB ieee/std_logic_arith 1192821032 PB ieee/STD_LOGIC_UNSIGNED 1192821033
+AR work/MUX2V16/Behavioral 1642084648 \
+      FL Z:/PIC24/MUX2V16.vhd EN work/MUX2V16 1642084647
+FL Z:/PIC24/MUX2V4.vhd 2022/01/12.11:51:51 J.40
+EN work/MUX2V4 1641981213 FL Z:/PIC24/MUX2V4.vhd PB ieee/std_logic_1164 1192821031 \
+      PB ieee/std_logic_arith 1192821032 PB ieee/STD_LOGIC_UNSIGNED 1192821033
+AR work/MUX2V4/Behavioral 1641981214 \
+      FL Z:/PIC24/MUX2V4.vhd EN work/MUX2V4 1641981213
+FL Z:/PIC24/PC_Update.vhd 2022/01/12.11:41:31 J.40
+EN work/PC_Update 1641980534 FL Z:/PIC24/PC_Update.vhd PB ieee/std_logic_1164 1192821031 \
+      PB ieee/std_logic_arith 1192821032 PB ieee/STD_LOGIC_UNSIGNED 1192821033
+AR work/PC_Update/Behavioral 1641980535 \
+      FL Z:/PIC24/PC_Update.vhd EN work/PC_Update 1641980534
+FL Z:/PIC24/PIC24.vhf 2022/01/13.14:21:17 J.40
+EN work/PIC24 1642076861 FL Z:/PIC24/PIC24.vhf PB ieee/std_logic_1164 1192821031 \
+      PH ieee/NUMERIC_STD 1192821033 LB UNISIM PH unisim/VCOMPONENTS 1194566982
+AR work/PIC24/BEHAVIORAL 1642076862 \
+      FL Z:/PIC24/PIC24.vhf EN work/PIC24 1642076861 CP MUX2V4 CP PC_Update \
+      CP ProgCnt CP ROM32x24 CP ctrl CP File_Regs CP ALU CP DataMem CP MUX2V16
+FL Z:/PIC24/ProgCnt.vhd 2022/01/12.11:41:22 J.40
+EN work/ProgCnt 1641980569 FL Z:/PIC24/ProgCnt.vhd PB ieee/std_logic_1164 1192821031 \
+      PB ieee/std_logic_arith 1192821032 PB ieee/STD_LOGIC_UNSIGNED 1192821033
+AR work/ProgCnt/Behavioral 1641980570 \
+      FL Z:/PIC24/ProgCnt.vhd EN work/ProgCnt 1641980569
+FL Z:/PIC24/ROM32x24.vhd 2022/01/13.16:23:59 J.40
+EN work/ROM32x24 1642083873 FL Z:/PIC24/ROM32x24.vhd PB ieee/std_logic_1164 1192821031 \
+      PB ieee/std_logic_arith 1192821032 PB ieee/STD_LOGIC_UNSIGNED 1192821033
+AR work/ROM32x24/Behavioar 1642083874 \
+      FL Z:/PIC24/ROM32x24.vhd EN work/ROM32x24 1642083873

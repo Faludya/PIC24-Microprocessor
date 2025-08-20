@@ -1,0 +1,348 @@
+VERSION 6
+BEGIN SCHEMATIC
+    BEGIN ATTR DeviceFamilyName "spartan3"
+        DELETE all:0
+        EDITNAME all:0
+        EDITTRAIT all:0
+    END ATTR
+    BEGIN NETLIST
+        SIGNAL Clk
+        SIGNAL New_PC(5:0)
+        SIGNAL N
+        SIGNAL OV
+        SIGNAL Z
+        SIGNAL C
+        SIGNAL XLXN_8
+        SIGNAL PC(5:0)
+        SIGNAL PC(5:1)
+        SIGNAL Instr(18:16)
+        SIGNAL XLXN_13(4:0)
+        SIGNAL XLXN_14(4:0)
+        SIGNAL XLXN_15(4:0)
+        SIGNAL XLXN_16(4:0)
+        PORT Input Clk
+        BEGIN BLOCKDEF PC_Update
+            TIMESTAMP 2022 1 12 10 2 15
+            RECTANGLE N 64 -512 400 0 
+            LINE N 64 -480 0 -480 
+            LINE N 64 -416 0 -416 
+            LINE N 64 -352 0 -352 
+            LINE N 64 -288 0 -288 
+            LINE N 64 -224 0 -224 
+            RECTANGLE N 0 -44 64 -20 
+            LINE N 64 -32 0 -32 
+            RECTANGLE N 400 -492 464 -468 
+            LINE N 400 -480 464 -480 
+            RECTANGLE N 0 -172 64 -148 
+            LINE N 64 -160 0 -160 
+            RECTANGLE N 0 -108 64 -84 
+            LINE N 64 -96 0 -96 
+        END BLOCKDEF
+        BEGIN BLOCKDEF ProgCnt
+            TIMESTAMP 2022 1 12 9 42 50
+            RECTANGLE N 64 -128 320 0 
+            LINE N 64 -96 0 -96 
+            RECTANGLE N 0 -44 64 -20 
+            LINE N 64 -32 0 -32 
+            RECTANGLE N 320 -108 384 -84 
+            LINE N 320 -96 384 -96 
+        END BLOCKDEF
+        BEGIN BLOCKDEF ROM32x24
+            TIMESTAMP 2022 1 12 9 50 51
+            RECTANGLE N 64 -64 320 0 
+            RECTANGLE N 0 -44 64 -20 
+            LINE N 64 -32 0 -32 
+            RECTANGLE N 320 -44 384 -20 
+            LINE N 320 -32 384 -32 
+        END BLOCKDEF
+        BEGIN BLOCKDEF MUX2V4
+            TIMESTAMP 2022 1 12 9 53 35
+            RECTANGLE N 64 -192 320 0 
+            LINE N 64 -160 0 -160 
+            RECTANGLE N 0 -108 64 -84 
+            LINE N 64 -96 0 -96 
+            RECTANGLE N 0 -44 64 -20 
+            LINE N 64 -32 0 -32 
+            RECTANGLE N 320 -172 384 -148 
+            LINE N 320 -160 384 -160 
+        END BLOCKDEF
+        BEGIN BLOCKDEF ctrl
+            TIMESTAMP 2022 1 12 9 54 23
+            RECTANGLE N 64 -704 320 0 
+            RECTANGLE N 0 -684 64 -660 
+            LINE N 64 -672 0 -672 
+            LINE N 320 -672 384 -672 
+            LINE N 320 -608 384 -608 
+            LINE N 320 -544 384 -544 
+            LINE N 320 -480 384 -480 
+            LINE N 320 -416 384 -416 
+            LINE N 320 -352 384 -352 
+            LINE N 320 -288 384 -288 
+            LINE N 320 -224 384 -224 
+            LINE N 320 -160 384 -160 
+            LINE N 320 -96 384 -96 
+            RECTANGLE N 320 -44 384 -20 
+            LINE N 320 -32 384 -32 
+        END BLOCKDEF
+        BEGIN BLOCKDEF File_Regs
+            TIMESTAMP 2022 1 12 9 54 59
+            RECTANGLE N 64 -384 384 0 
+            LINE N 64 -352 0 -352 
+            LINE N 64 -288 0 -288 
+            RECTANGLE N 0 -236 64 -212 
+            LINE N 64 -224 0 -224 
+            RECTANGLE N 0 -172 64 -148 
+            LINE N 64 -160 0 -160 
+            RECTANGLE N 0 -108 64 -84 
+            LINE N 64 -96 0 -96 
+            RECTANGLE N 0 -44 64 -20 
+            LINE N 64 -32 0 -32 
+            RECTANGLE N 384 -364 448 -340 
+            LINE N 384 -352 448 -352 
+            RECTANGLE N 384 -44 448 -20 
+            LINE N 384 -32 448 -32 
+        END BLOCKDEF
+        BEGIN BLOCKDEF ALU
+            TIMESTAMP 2022 1 12 9 55 36
+            RECTANGLE N 64 -704 320 0 
+            LINE N 64 -672 0 -672 
+            LINE N 64 -608 0 -608 
+            LINE N 64 -544 0 -544 
+            LINE N 64 -480 0 -480 
+            LINE N 64 -416 0 -416 
+            RECTANGLE N 0 -364 64 -340 
+            LINE N 64 -352 0 -352 
+            RECTANGLE N 0 -300 64 -276 
+            LINE N 64 -288 0 -288 
+            RECTANGLE N 0 -236 64 -212 
+            LINE N 64 -224 0 -224 
+            RECTANGLE N 0 -172 64 -148 
+            LINE N 64 -160 0 -160 
+            RECTANGLE N 0 -108 64 -84 
+            LINE N 64 -96 0 -96 
+            RECTANGLE N 0 -44 64 -20 
+            LINE N 64 -32 0 -32 
+            LINE N 320 -672 384 -672 
+            LINE N 320 -512 384 -512 
+            LINE N 320 -352 384 -352 
+            LINE N 320 -192 384 -192 
+            RECTANGLE N 320 -44 384 -20 
+            LINE N 320 -32 384 -32 
+        END BLOCKDEF
+        BEGIN BLOCKDEF DataMem
+            TIMESTAMP 2022 1 12 9 56 0
+            RECTANGLE N 64 -384 368 0 
+            LINE N 64 -352 0 -352 
+            LINE N 64 -288 0 -288 
+            RECTANGLE N 0 -236 64 -212 
+            LINE N 64 -224 0 -224 
+            RECTANGLE N 0 -172 64 -148 
+            LINE N 64 -160 0 -160 
+            RECTANGLE N 0 -108 64 -84 
+            LINE N 64 -96 0 -96 
+            RECTANGLE N 0 -44 64 -20 
+            LINE N 64 -32 0 -32 
+            RECTANGLE N 368 -364 432 -340 
+            LINE N 368 -352 432 -352 
+            RECTANGLE N 368 -44 432 -20 
+            LINE N 368 -32 432 -32 
+        END BLOCKDEF
+        BEGIN BLOCKDEF MUX2V16
+            TIMESTAMP 2022 1 12 9 57 48
+            RECTANGLE N 64 -192 320 0 
+            LINE N 64 -160 0 -160 
+            RECTANGLE N 0 -108 64 -84 
+            LINE N 64 -96 0 -96 
+            RECTANGLE N 0 -44 64 -20 
+            LINE N 64 -32 0 -32 
+            RECTANGLE N 320 -172 384 -148 
+            LINE N 320 -160 384 -160 
+        END BLOCKDEF
+        BEGIN BLOCK XLXI_1 PC_Update
+            PIN N N
+            PIN OV OV
+            PIN Z Z
+            PIN C C
+            PIN Branch XLXN_8
+            PIN PC(5:0) PC(5:0)
+            PIN New_PC(5:0) New_PC(5:0)
+            PIN BranchType(2:0) Instr(18:16)
+            PIN Offset(4:0) XLXN_13(4:0)
+        END BLOCK
+        BEGIN BLOCK XLXI_2 ProgCnt
+            PIN Clk Clk
+            PIN New_PC(5:0) New_PC(5:0)
+            PIN PC(5:0) PC(5:0)
+        END BLOCK
+        BEGIN BLOCK XLXI_3 ROM32x24
+            PIN Addr(4:0) PC(5:1)
+            PIN Data(23:0)
+        END BLOCK
+        BEGIN BLOCK XLXI_4 MUX2V4
+            PIN Sel
+            PIN I0(3:0)
+            PIN I1(3:0)
+            PIN Y(3:0)
+        END BLOCK
+        BEGIN BLOCK XLXI_5 MUX2V4
+            PIN Sel
+            PIN I0(3:0)
+            PIN I1(3:0)
+            PIN Y(3:0)
+        END BLOCK
+        BEGIN BLOCK XLXI_6 ctrl
+            PIN OP(4:0)
+            PIN MemWr
+            PIN Mem2Reg
+            PIN RegWr
+            PIN RegDest
+            PIN RegBase
+            PIN Branch
+            PIN CE_NF
+            PIN CE_OVF
+            PIN CE_ZF
+            PIN CE_CF
+            PIN ALUOP(2:0)
+        END BLOCK
+        BEGIN BLOCK XLXI_7 File_Regs
+            PIN Clk
+            PIN WrEn
+            PIN RdReg1(3:0)
+            PIN RdReg2(3:0)
+            PIN WrReg(3:0)
+            PIN WrData(15:0)
+            PIN RdData1(15:0)
+            PIN RdData2(15:0)
+        END BLOCK
+        BEGIN BLOCK XLXI_8 ALU
+            PIN Clk
+            PIN CE_CF
+            PIN CE_NF
+            PIN CE_OVF
+            PIN CE_ZF
+            PIN RdData1(15:0)
+            PIN RdData2(15:0)
+            PIN SUBR_lit5(4:0)
+            PIN LSR_lit4(3:0)
+            PIN BTSTZ_bit4(3:0)
+            PIN ALUOP(2:0)
+            PIN C
+            PIN N
+            PIN OV
+            PIN Z
+            PIN Y(15:0)
+        END BLOCK
+        BEGIN BLOCK XLXI_9 DataMem
+            PIN Clk
+            PIN Wr
+            PIN INW0(15:0)
+            PIN INW1(15:0)
+            PIN Addr(4:0)
+            PIN DataIn(15:0)
+            PIN OUTW0(15:0)
+            PIN DataOut(15:0)
+        END BLOCK
+        BEGIN BLOCK XLXI_10 MUX2V16
+            PIN Sel
+            PIN I0(15:0)
+            PIN I1(15:0)
+            PIN Y(15:0)
+        END BLOCK
+    END NETLIST
+    BEGIN SHEET 1 5440 3520
+        BEGIN INSTANCE XLXI_4 1616 416 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_5 1616 736 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_6 1648 2144 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_7 2224 1008 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_8 3136 944 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_9 3920 608 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_10 4064 1072 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_1 896 768 M0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_2 480 1136 R0
+        END INSTANCE
+        BEGIN BRANCH Clk
+            WIRE 464 1040 480 1040
+        END BRANCH
+        IOMARKER 464 1040 Clk R180 28
+        BEGIN BRANCH New_PC(5:0)
+            WIRE 304 288 432 288
+            WIRE 304 288 304 304
+            WIRE 304 304 304 672
+            WIRE 304 672 304 1104
+            WIRE 304 1104 480 1104
+            BEGIN DISPLAY 304 672 ATTR Name
+                ALIGNMENT SOFT-TVCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH N
+            WIRE 896 288 944 288
+            WIRE 944 288 1008 288
+            BEGIN DISPLAY 944 288 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH OV
+            WIRE 896 352 944 352
+            WIRE 944 352 1008 352
+            BEGIN DISPLAY 944 352 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH Z
+            WIRE 896 416 944 416
+            WIRE 944 416 1008 416
+            BEGIN DISPLAY 944 416 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH C
+            WIRE 896 480 944 480
+            WIRE 944 480 1008 480
+            BEGIN DISPLAY 944 480 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH XLXN_8
+            WIRE 896 544 1008 544
+        END BRANCH
+        BEGIN BRANCH PC(5:0)
+            WIRE 864 1040 960 1040
+            WIRE 960 1040 960 1104
+            WIRE 960 1104 960 1184
+            WIRE 896 736 960 736
+            WIRE 960 736 960 864
+            WIRE 960 864 960 1040
+            BEGIN DISPLAY 960 864 ATTR Name
+                ALIGNMENT SOFT-TVCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 960 1104 1056 1104
+        BEGIN BRANCH PC(5:1)
+            WIRE 1056 1104 1136 1104
+            WIRE 1136 1104 1216 1104
+            BEGIN DISPLAY 1136 1104 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH Instr(18:16)
+            WIRE 896 608 992 608
+            WIRE 992 608 1072 608
+            BEGIN DISPLAY 992 608 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH XLXN_13(4:0)
+            WIRE 896 672 1008 672
+        END BRANCH
+        BEGIN INSTANCE XLXI_3 1216 1136 R0
+        END INSTANCE
+    END SHEET
+END SCHEMATIC
